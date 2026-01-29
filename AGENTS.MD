@@ -1,14 +1,14 @@
 # AGENTS.MD
 
-Peter owns this. Start: say hi + 1 motivating line.
+Start: say hi + 1 motivating line.
 Work style: telegraph; noun-phrases ok; drop grammar; min tokens.
 
 ## Agent Protocol
-- Contact: Peter Steinberger (@steipete, steipete@gmail.com).
+
 - Workspace: `~/Projects`. Missing steipete repo: clone `https://github.com/steipete/<repo>.git`.
 - 3rd-party/OSS (non-steipete): clone under `~/Projects/oss`.
 - `~/Projects/manager`: private ops (domains/DNS, redirects/workers, runbooks).
-- “MacBook” / “Mac Studio” => SSH there; find hosts/IPs via `tailscale status`.
+
 - Files: repo or `~/Projects/agent-scripts`.
 - PRs: use `gh pr view/diff` (no URLs).
 - “Make a note” => edit AGENTS.md (shortcut; not a blocker). Ignore `CLAUDE.md`.
@@ -35,11 +35,9 @@ Work style: telegraph; noun-phrases ok; drop grammar; min tokens.
 - Replace asset; keep dimensions; commit; run gate; verify CI.
 
 ## Important Locations
-- Blog repo: `~/Projects/steipete.me`
 - Notes/Runbooks: `~/Projects/manager/docs/` (e.g. `mac-studio.md`, `mac-vm.md`)
-- OpenAI/Codex limits tracking: `~/Documents/steipete/codex limits.md`
-- Obsidian vault: `$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/steipete-notes`
-- Sparkle keys: `~/Library/CloudStorage/Dropbox/Backup/Sparkle`
+- OpenAI/Codex limits tracking: `~/Documents/codex limits.md`
+- Obsidian vault: `~/Documents/Obsidian Vault`
 
 ## Docs
 - Start: run docs list (`docs:list` script, or `bin/docs-list` here if present; ignore if not installed); open docs before coding.
@@ -64,7 +62,7 @@ Work style: telegraph; noun-phrases ok; drop grammar; min tokens.
 - CI red: `gh run list/view`, rerun, fix, push, repeat til green.
 - Keep it observable (logs, panes, tails, MCP/browser tools).
 - Release: read `docs/RELEASING.md` (or find best checklist if missing).
-- Reminder: check `~/.profile` for missing env keys (e.g. `SPARKLE_PRIVATE_KEY_FILE`); Sparkle keys live in `~/Library/CloudStorage/Dropbox/Backup/Sparkle`.
+- Reminder: check `~/.profile` for missing env keys (e.g. `SPARKLE_PRIVATE_KEY_FILE`).
 
 ## Git
 - Safe by default: `git status/diff/log`. Push only when user asks.
@@ -99,21 +97,11 @@ Work style: telegraph; noun-phrases ok; drop grammar; min tokens.
 
 Read `~/Projects/agent-scripts/tools.md` for the full tool catalog if it exists.
 
-### bird
-- X CLI: `~/Projects/bird/bird`. Cmds: `tweet`, `reply`, `read`, `thread`, `search`, `mentions`, `whoami`.
-- Uses Firefox cookies by default (`--firefox-profile` to switch).
-
-### sonoscli
-- Sonos CLI: `~/Projects/sonoscli/bin/sonos`. Cmds: `discover`, `status`, `play/pause/stop`, `volume set`, `group`.
-- SSDP can fail: use `--ip <speaker-ip>`.
-- Spotify SMAPI: `sonos smapi search --service "Spotify" --category tracks "query"`.
 
 ### peekaboo
 - Screen tools: `~/Projects/Peekaboo`. Cmds: `capture`, `see`, `click`, `list`, `tools`, `permissions status`.
 - Needs Screen Recording + Accessibility. Docs: `~/Projects/Peekaboo/docs/commands/`.
 
-### sweetistics
-- X analytics app: `~/Projects/sweetistics`.
 
 ### committer
 - Commit helper (PATH). Stages only listed paths; required here. Repo may also ship `./scripts/committer`.
