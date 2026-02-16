@@ -8,6 +8,14 @@ Additional skills (copied 2025-12-31) are from @Dimillian’s public `Dimillian/
 - `skills/swiftui-performance-audit`
 - `skills/swiftui-view-refactor`
 
+## Skill Discovery + Install (`npx skills`)
+- Quick help: `npx skills --help`
+- Discover interactively: `npx skills find [query]`
+- Discover from repo listing: `npx skills add openai/skills -l`
+- Install globally (to `~/.agents/skills`): `npx skills add openai/skills --skill <skill-name> -g -y`
+- Install from another repo: `npx skills add <owner>/<repo> --skill <skill-name> -g -y`
+- Verify global installs: `npx skills list -g`
+
 ## Syncing With Other Repos
 - Treat this repo as the canonical mirror for the shared guardrail helpers. Whenever you edit `scripts/committer` or `scripts/docs-list.ts` in any repo, copy the change here and then back out to every other repo that carries the same helpers so they stay byte-identical.
 - When someone says “sync agent scripts,” pull the latest changes here, ensure downstream repos have the pointer-style `AGENTS.MD`, copy any helper updates into place, and reconcile differences before moving on.

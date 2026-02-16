@@ -12,6 +12,10 @@ Work style: telegraph; noun-phrases ok; drop grammar; min tokens.
 - Files: repo or `~/Projects/agent-scripts`.
 - PRs: use `gh pr view/diff` (no URLs).
 - “Make a note” => edit AGENTS.md (shortcut; not a blocker). Ignore `CLAUDE.md`.
+- Notes location: store notes in the active project folder (for example `<project>/notes/` or project-local docs notes).
+- Global notes file: only `~/Projects/agent-scripts/notes_index.md`; keep it updated with links to project note files.
+- Every launch: read `~/Projects/agent-scripts/notes_index.md`, then read relevant linked project notes before implementation.
+- Complex tasks: write/update a short note in the active project folder during or right after implementation; then add/update its link in `~/Projects/agent-scripts/notes_index.md`; goal: faster future runs, less re-discovery.
 - No `./runner`. Guardrails: use `trash` for deletes.
 - Need upstream file: stage in `/tmp/`, then cherry-pick; never overwrite tracked.
 - Bugs: add regression test when it fits.
@@ -23,6 +27,8 @@ Work style: telegraph; noun-phrases ok; drop grammar; min tokens.
 - Prefer end-to-end verify; if blocked, say what’s missing.
 - New deps: quick health check (recent releases/commits, adoption).
 - Slash cmds: `~/.codex/prompts/`.
+- Skills: never install skills without explicit user permission first.
+- Skills: always install into `~/.agents/skills` (never `~/.codex/skills`).
 - Web: search early; quote exact errors; prefer 2024–2025 sources; fallback Firecrawl (`pnpm mcp:*`) / `mcporter`.
 - Oracle: run `npx -y @steipete/oracle --help` once/session before first use.
 - Style: telegraph. Drop filler/grammar. Min tokens (global AGENTS + replies).
@@ -36,6 +42,8 @@ Work style: telegraph; noun-phrases ok; drop grammar; min tokens.
 
 ## Important Locations
 - Notes/Runbooks: `~/Projects/manager/docs/` (e.g. `mac-studio.md`, `mac-vm.md`)
+- Global notes index: `~/Projects/agent-scripts/notes_index.md`
+- Task implementation notes: project-local note files (linked from `notes_index.md`)
 - OpenAI/Codex limits tracking: `~/Documents/codex limits.md`
 - Obsidian vault: `~/Documents/Obsidian Vault`
 
