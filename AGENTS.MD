@@ -5,13 +5,10 @@ Work style: telegraph; noun-phrases ok; drop grammar; min tokens.
 
 ## Agent Protocol
 
-- Workspace: `~/Projects`. Missing steipete repo: clone `https://github.com/steipete/<repo>.git`.
-- 3rd-party/OSS (non-steipete): clone under `~/Projects/oss`.
-- `~/Projects/manager`: private ops (domains/DNS, redirects/workers, runbooks).
-
+- Workspace: `~/Projects`.
 - Files: repo or `~/Projects/agent-scripts`.
 - PRs: use `gh pr view/diff` (no URLs).
-- “Make a note” => edit AGENTS.md (shortcut; not a blocker). Ignore `CLAUDE.md`.
+- “Make a note” => edit `~/Projects/agent-scripts/AGENTS.md` (shortcut; not a blocker). Ignore `CLAUDE.md`.
 - Notes location: store notes in the active project folder (for example `<project>/notes/` or project-local docs notes).
 - Global notes file: only `~/Projects/agent-scripts/notes_index.md`; keep it updated with links to project note files.
 - Every launch: read `~/Projects/agent-scripts/notes_index.md`, then read relevant linked project notes before implementation.
@@ -32,6 +29,7 @@ Work style: telegraph; noun-phrases ok; drop grammar; min tokens.
 - Web: search early; quote exact errors; prefer 2024–2025 sources; fallback Firecrawl (`pnpm mcp:*`) / `mcporter`.
 - Oracle: run `npx -y @steipete/oracle --help` once/session before first use.
 - Style: telegraph. Drop filler/grammar. Min tokens (global AGENTS + replies).
+- Coding principles: separation of concerns, modularisation.  
 
 ## Screenshots (“use a screenshot”)
 - Pick newest PNG in `~/Desktop` or `~/Downloads`.
@@ -41,18 +39,14 @@ Work style: telegraph; noun-phrases ok; drop grammar; min tokens.
 - Replace asset; keep dimensions; commit; run gate; verify CI.
 
 ## Important Locations
-- Notes/Runbooks: `~/Projects/manager/docs/` (e.g. `mac-studio.md`, `mac-vm.md`)
 - Global notes index: `~/Projects/agent-scripts/notes_index.md`
 - Task implementation notes: project-local note files (linked from `notes_index.md`)
-- OpenAI/Codex limits tracking: `~/Documents/codex limits.md`
-- Obsidian vault: `~/Documents/Obsidian Vault`
 
 ## Docs
 - Start: run docs list (`docs:list` script, or `bin/docs-list` here if present; ignore if not installed); open docs before coding.
 - Follow links until domain makes sense; honor `Read when` hints.
 - Keep notes short; update docs when behavior/API changes (no ship w/o docs).
 - Add `read_when` hints on cross-cutting docs.
-- Model note (2025-11-23): no `gpt-5.1-pro` / `grok-4.1` on Peter’s keys yet.
 - Model preference: latest only. OK: Anthropic Opus 4.5 / Sonnet 4.5 (Sonnet 3.5 = old; avoid), OpenAI GPT-5.2, xAI Grok-4.1 Fast, Google Gemini 3 Flash.
 
 ## PR Feedback
@@ -65,12 +59,16 @@ Work style: telegraph; noun-phrases ok; drop grammar; min tokens.
 - Use repo’s package manager/runtime; no swaps w/o approval.
 - Use Codex background for long jobs; tmux only for interactive/persistent (debugger/server).
 
+## Post-Implementation Checklist (Required after big changes in existing files)
+- Review error messages for correctness and tighten them (actionable, specific, no ambiguity).
+- For CLI tools, review and update CLI help text/command descriptions for changed behavior.
+- Check for and remove unused code introduced during implementation.
+
 ## Build / Test
 - Before handoff: run full gate (lint/typecheck/tests/docs).
 - CI red: `gh run list/view`, rerun, fix, push, repeat til green.
 - Keep it observable (logs, panes, tails, MCP/browser tools).
-- Release: read `docs/RELEASING.md` (or find best checklist if missing).
-- Reminder: check `~/.profile` for missing env keys (e.g. `SPARKLE_PRIVATE_KEY_FILE`).
+- Reminder: check `~/.profile` and `~/.bashrc` for missing env keys.
 
 ## Git
 - Safe by default: `git status/diff/log`. Push only when user asks.
@@ -78,7 +76,6 @@ Work style: telegraph; noun-phrases ok; drop grammar; min tokens.
 - Branch changes require user consent.
 - Destructive ops forbidden unless explicit (`reset --hard`, `clean`, `restore`, `rm`, …).
 - Remotes under `~/Projects`: prefer HTTPS; flip SSH->HTTPS before pull/push.
-- Commit helper on PATH: `committer` (bash). Prefer it; if repo has `./scripts/committer`, use that.
 - Don’t delete/rename unexpected stuff; stop + ask.
 - No repo-wide S/R scripts; keep edits small/reviewable.
 - Avoid manual `git stash`; if Git auto-stashes during pull/rebase, that’s fine (hint, not hard guardrail).
@@ -104,12 +101,6 @@ Work style: telegraph; noun-phrases ok; drop grammar; min tokens.
 ## Tools
 
 Read `~/Projects/agent-scripts/tools.md` for the full tool catalog if it exists.
-
-
-### peekaboo
-- Screen tools: `~/Projects/Peekaboo`. Cmds: `capture`, `see`, `click`, `list`, `tools`, `permissions status`.
-- Needs Screen Recording + Accessibility. Docs: `~/Projects/Peekaboo/docs/commands/`.
-
 
 ### committer
 - Commit helper (PATH). Stages only listed paths; required here. Repo may also ship `./scripts/committer`.
