@@ -67,4 +67,7 @@ Global index of project note files.
 - `lex-cli`: `lex-cli/notes/2026-03-04-categorize-batch-shared-categorizer.md`
 - `lex-cli`: `lex-cli/notes/2026-03-04-ocr-command-handle-cutover.md`
 - `lex-cli`: `lex-cli/notes/2026-03-04-categorizer-openai-only-structured-country.md`
+- `lex-cli`: `lex-cli/notes/2026-03-04-remove-ocr-package-and-ocr-doctr.md`
 - `lex-cli`: `lex-cli/notes/2026-03-04-remove-inv2026-and-unchecked-expense-commands.md`
+- `lex-cli`: `lex-cli/notes/2026-03-04-contact-name-address-priority.md`
+- `lex-cli`: `lex-cli/notes/2026-03-05-avoid-thin-wrappers.md`
