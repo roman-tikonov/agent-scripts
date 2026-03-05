@@ -71,3 +71,7 @@ Global index of project note files.
 - `lex-cli`: `lex-cli/notes/2026-03-04-remove-inv2026-and-unchecked-expense-commands.md`
 - `lex-cli`: `lex-cli/notes/2026-03-04-contact-name-address-priority.md`
 - `lex-cli`: `lex-cli/notes/2026-03-05-avoid-thin-wrappers.md`
+- `lex-cli`: `lex-cli/notes/2026-03-05-find-contacts-shared-module.md`
+- `lex-cli`: `lex-cli/notes/2026-03-05-contact-creation-lexapi-move.md`
+- `lex-cli`: `lex-cli/notes/2026-03-05-ocr-vs-lexoffice-amount-review-gate.md`
+- `lex-cli`: `lex-cli/notes/2026-03-05-document-number-ocr-lexoffice-reconciliation.md`
