@@ -78,6 +78,7 @@ Global index of project note files.
 - `lex-cli`: `lex-cli/notes/2026-03-05-typed-categorization-models.md`
 - `lex-cli`: `lex-cli/notes/2026-03-05-split-lexoffice-vs-local-types.md`
 - `lex-cli`: `lex-cli/notes/2026-03-06-sales-batch-empty-items-fallback.md`
+- `lex-cli`: `lex-cli/notes/2026-03-06-categorize-batch-all-mode.md`
 - `lex-cli`: `lex-cli/notes/2026-03-06-sales-vat-post-validation-zero-fallback.md`
 - `lex-cli`: `lex-cli/notes/2026-03-06-paymethod-notpaid-and-billing-open.md`
 - `lex-cli`: `lex-cli/notes/2026-03-06-categorizer-api-extraction.md`
