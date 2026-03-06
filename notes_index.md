@@ -83,3 +83,5 @@ Global index of project note files.
 - `lex-cli`: `lex-cli/notes/2026-03-06-openai-vision-returns-structured-ocr.md`
 - `lex-cli`: `lex-cli/notes/2026-03-06-vat-rules-module-extraction.md`
 - `lex-cli`: `lex-cli/notes/2026-03-06-vat-signals-single-value.md`
+- `lex-cli`: `lex-cli/notes/2026-03-06-remove-structured-ocr-candidates.md`
+- `lex-cli`: `lex-cli/notes/2026-03-06-multiline-categorize-error-output.md`
