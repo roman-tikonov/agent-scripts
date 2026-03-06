@@ -93,3 +93,4 @@ Global index of project note files.
 - `lex-cli`: `lex-cli/notes/2026-03-06-put-response-status-output.md`
 - `lex-cli`: `lex-cli/notes/2026-03-06-categorize-output-module.md`
 - `lex-cli`: `lex-cli/notes/2026-03-06-ocr-invoice-dates-backfill.md`
+- `lex-cli`: `lex-cli/notes/2026-03-06-ocr-document-type-mismatch-review.md`
