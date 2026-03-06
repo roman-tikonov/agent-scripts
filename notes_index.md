@@ -79,3 +79,4 @@ Global index of project note files.
 - `lex-cli`: `lex-cli/notes/2026-03-05-split-lexoffice-vs-local-types.md`
 - `lex-cli`: `lex-cli/notes/2026-03-06-sales-batch-empty-items-fallback.md`
 - `lex-cli`: `lex-cli/notes/2026-03-06-categorizer-api-extraction.md`
+- `lex-cli`: `lex-cli/notes/2026-03-06-country-info-module.md`
