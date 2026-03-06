@@ -75,3 +75,7 @@ Global index of project note files.
 - `lex-cli`: `lex-cli/notes/2026-03-05-contact-creation-lexapi-move.md`
 - `lex-cli`: `lex-cli/notes/2026-03-05-ocr-vs-lexoffice-amount-review-gate.md`
 - `lex-cli`: `lex-cli/notes/2026-03-05-document-number-ocr-lexoffice-reconciliation.md`
+- `lex-cli`: `lex-cli/notes/2026-03-05-typed-categorization-models.md`
+- `lex-cli`: `lex-cli/notes/2026-03-05-split-lexoffice-vs-local-types.md`
+- `lex-cli`: `lex-cli/notes/2026-03-06-sales-batch-empty-items-fallback.md`
+- `lex-cli`: `lex-cli/notes/2026-03-06-categorizer-api-extraction.md`

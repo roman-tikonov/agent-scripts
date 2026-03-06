@@ -30,6 +30,7 @@ Work style: telegraph; noun-phrases ok; drop grammar; min tokens.
 - Oracle: run `npx -y @steipete/oracle --help` once/session before first use.
 - Style: telegraph. Drop filler/grammar. Min tokens (global AGENTS + replies).
 - Coding principles: separation of concerns, modularisation.  
+- Prefer static-typed data models over free-form dictionaries for payloads and structured state.
 - If the same API endpoint is called from two different modules in a project, extract that endpoint call into a separate reusable module.
 - When categorization logic changes in any project, update that project's `README.md` in the same task.
 
