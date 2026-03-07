@@ -97,3 +97,4 @@ Global index of project note files.
 - `lex-cli`: `lex-cli/notes/2026-03-07-cat-manual-command-split.md`
 - `lex-cli`: `lex-cli/notes/2026-03-07-categorize-batch-remove-overrides.md`
 - `lex-cli`: `lex-cli/notes/2026-03-07-remove-prefer-lexapi-details.md`
+- `lex-cli`: `lex-cli/notes/2026-03-07-move-categorization-logic-into-logic-package.md`
