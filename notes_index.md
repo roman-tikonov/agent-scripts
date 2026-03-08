@@ -46,7 +46,7 @@ Global index of project note files.
 - `lex-cli`: `lex-cli/notes/2026-03-02-categorize-unchecked-expenses-command.md`
 - `lex-cli`: `lex-cli/notes/2026-03-02-ocr-command.md`
 - `lex-cli`: `lex-cli/notes/2026-03-02-ocr-engines-file-split.md`
-- `lex-cli`: `lex-cli/notes/2026-03-02-january-paid-expense-voucher-learnings.md`
+- `lex-cli`: `lex-cli/docs/paid-expense-voucher-knowledge-base.md`
 - `lex-cli`: `lex-cli/notes/2026-03-02-categorize-inv2026-vat-progress-output.md`
 - `lex-cli`: `lex-cli/notes/2026-03-02-categorize-inv2026-vat-contact-proposal-priority.md`
 - `lex-cli`: `lex-cli/notes/2026-03-02-categorize-inv2026-vat-always-ocr-country-mismatch.md`
@@ -99,3 +99,15 @@ Global index of project note files.
 - `lex-cli`: `lex-cli/notes/2026-03-07-remove-prefer-lexapi-details.md`
 - `lex-cli`: `lex-cli/notes/2026-03-07-move-categorization-logic-into-logic-package.md`
 - `lex-cli`: `lex-cli/notes/2026-03-07-expense-knowledge-base-module.md`
+- `lex-cli`: `lex-cli/notes/2026-03-07-mandatory-pytest-tooling.md`
+- `lex-cli`: `lex-cli/notes/2026-03-08-sales-non-eu-services-to-third-countries.md`
+- `lex-cli`: `lex-cli/notes/2026-03-08-categorize-raw-error-request-response.md`
+- `lex-cli`: `lex-cli/notes/2026-03-08-remove-sales-third-country-category-branch.md`
+- `lex-cli`: `lex-cli/notes/2026-03-08-expense-kb-path-env.md`
+- `lex-cli`: `lex-cli/notes/2026-03-08-country-info-iso-backfill.md`
+- `lex-cli`: `lex-cli/notes/2026-03-08-september-2025-paid-purchase-kb-backfill.md`
+- `lex-cli`: `lex-cli/notes/2026-03-08-august-2025-paid-purchase-kb-backfill.md`
+- `lex-cli`: `lex-cli/docs/stripe-payout-reconciliation-method.md`
+- `lex-cli`: `lex-cli/docs/stripe-payout-reconciliation-runs.md`
+- `lex-cli`: `lex-cli/notes/2026-03-08-stripe-clean-match-categorize-run.md`
+- `lex-cli`: `lex-cli/notes/2026-03-08-ocr-name-mismatch-warning.md`
