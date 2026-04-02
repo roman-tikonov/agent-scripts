@@ -31,7 +31,9 @@ Work style: telegraph; noun-phrases ok; drop grammar; min tokens.
 - Style: telegraph. Drop filler/grammar. Min tokens (global AGENTS + replies).
 - Coding principles: separation of concerns, modularisation.  
 - Prefer static-typed data models over free-form dictionaries for payloads and structured state.
+- Always choose the strictest type applicable when implementing a parameter, response type, or variable.
 - Keep module public surfaces minimal; make helpers/constants private unless used outside the module.
+- Avoid chain imports and re-export coupling; import from the owning module unless a stable public module is intentionally defined and maintained.
 - If the same API endpoint is called from two different modules in a project, extract that endpoint call into a separate reusable module.
 - When categorization logic changes in any project, update that project's `README.md` in the same task.
 
