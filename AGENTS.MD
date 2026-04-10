@@ -10,10 +10,11 @@ Work style: telegraph; noun-phrases ok; drop grammar; min tokens.
 - PRs: use `gh pr view/diff` (no URLs).
 - “Make a note” => edit `~/Projects/agent-scripts/AGENTS.md` (shortcut; not a blocker). Ignore `CLAUDE.md`.
 - Notes location: store notes in the active project folder (for example `<project>/notes/` or project-local docs notes).
-- Global notes file: only `~/Projects/agent-scripts/notes_index.md`; keep it updated with links to project note files.
-- Every launch: read `~/Projects/agent-scripts/notes_index.md`, then read relevant linked project notes before implementation.
-- Complex tasks: write/update a short note in the active project folder during or right after implementation; then add/update its link in `~/Projects/agent-scripts/notes_index.md`; goal: faster future runs, less re-discovery.
+- Notes index: keep any note index inside the active project repository (for example `<project>/notes/README.md`); do not maintain a shared global notes index file.
+- Every launch: read the active project's local note index if present, then read relevant linked project notes before implementation.
+- Complex tasks: write/update a short note in the active project folder during or right after implementation; then add/update that project's local note index; goal: faster future runs, less re-discovery.
 - No `./runner`. Guardrails: use `trash` for deletes.
+- Store temporary files under a `.tmp/` folder in the relevant project.
 - Need upstream file: stage in `/tmp/`, then cherry-pick; never overwrite tracked.
 - Bugs: add regression test when it fits.
 - Keep files <~500 LOC; split/refactor as needed.
@@ -45,8 +46,8 @@ Work style: telegraph; noun-phrases ok; drop grammar; min tokens.
 - Replace asset; keep dimensions; commit; run gate; verify CI.
 
 ## Important Locations
-- Global notes index: `~/Projects/agent-scripts/notes_index.md`
-- Task implementation notes: project-local note files (linked from `notes_index.md`)
+- Project-local notes index: for example `<project>/notes/README.md`
+- Task implementation notes: project-local note files
 
 ## Docs
 - Start: run docs list (`docs:list` script, or `bin/docs-list` here if present; ignore if not installed); open docs before coding.
