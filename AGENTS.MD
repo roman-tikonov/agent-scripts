@@ -10,7 +10,7 @@ Work style: telegraph; noun-phrases ok; drop grammar; min tokens.
 - PRs: use `gh pr view/diff` (no URLs).
 - “Make a note” => edit `~/Projects/agent-scripts/AGENTS.md` (shortcut; not a blocker). Ignore `CLAUDE.md`.
 - Notes location: store notes in the active project folder (for example `<project>/notes/` or project-local docs notes).
-- Notes index: keep any note index inside the active project repository (for example `<project>/notes/README.md`); do not maintain a shared global notes index file.
+- Notes index: keep any note index inside the active project repository (for example `<project>/notes/notes_index.md`); do not maintain a shared global notes index file.
 - Every launch: read the active project's local note index if present, then read relevant linked project notes before implementation.
 - Complex tasks: write/update a short note in the active project folder during or right after implementation; then add/update that project's local note index; goal: faster future runs, less re-discovery.
 - No `./runner`. Guardrails: use `trash` for deletes.
@@ -23,20 +23,22 @@ Work style: telegraph; noun-phrases ok; drop grammar; min tokens.
 - Editor: `code <path>`.
 - CI: `gh run list/view` (rerun/fix til green).
 - Prefer end-to-end verify; if blocked, say what’s missing.
-- New deps: quick health check (recent releases/commits, adoption).
+- New deps: before installing any project dependency, verify it appears safe and non-malicious. Look it up online using trustworthy sources (package registry, source repo, release history, issue tracker, security advisories, maintainer reputation). Warn the user before install if suspicious.
+- Dependency safety criteria: expected package name/scope/repo/maintainer; no typosquatting or dependency-confusion signs; reasonable adoption/downloads; recent legitimate releases/commits; no unresolved critical advisories or malware reports; no suspicious install/postinstall scripts; no unusual obfuscated code, unexpected binaries, credential access, or broad filesystem/network behavior; registry tarball matches repo/license/published files; dependency is actually necessary versus existing project deps or standard-library/native alternatives.
 - Slash cmds: `~/.codex/prompts/`.
 - Skills: never install skills without explicit user permission first.
 - Skills: always install into `~/.agents/skills` (never `~/.codex/skills`).
-- Web: search early; quote exact errors; prefer 2024–2025 sources; fallback Firecrawl (`pnpm mcp:*`) / `mcporter`.
-- Oracle: run `npx -y @steipete/oracle --help` once/session before first use.
+- Web: search early; quote exact errors; prefer 2025–2026 sources; fallback Firecrawl (`pnpm mcp:*`) / `mcporter`.
 - Style: telegraph. Drop filler/grammar. Min tokens (global AGENTS + replies).
+
+## Coding and system design conventions
 - Coding principles: separation of concerns, modularisation.  
 - Prefer static-typed data models over free-form dictionaries for payloads and structured state.
 - Always choose the strictest type applicable when implementing a parameter, response type, or variable.
 - Keep module public surfaces minimal; make helpers/constants private unless used outside the module.
 - Avoid chain imports and re-export coupling; import from the owning module unless a stable public module is intentionally defined and maintained.
 - If the same API endpoint is called from two different modules in a project, extract that endpoint call into a separate reusable module.
-- When categorization logic changes in any project, update that project's `README.md` in the same task.
+
 
 ## Screenshots (“use a screenshot”)
 - Pick newest PNG in `~/Desktop` or `~/Downloads`.
@@ -46,7 +48,7 @@ Work style: telegraph; noun-phrases ok; drop grammar; min tokens.
 - Replace asset; keep dimensions; commit; run gate; verify CI.
 
 ## Important Locations
-- Project-local notes index: for example `<project>/notes/README.md`
+- Project-local notes index: for example `<project>/notes/notes_index.md`
 - Task implementation notes: project-local note files
 
 ## Docs
@@ -92,11 +94,7 @@ Work style: telegraph; noun-phrases ok; drop grammar; min tokens.
 - Multi-agent: check `git status/diff` before edits; ship small commits.
 
 ## Language/Stack Notes
-- Swift: use workspace helper/daemon; validate `swift build` + tests; keep concurrency attrs right.
 - TypeScript: use repo PM; run `docs:list`; keep files small; follow existing patterns.
-
-## macOS Permissions / Signing (TCC)
-- Never re-sign / ad-hoc sign / change bundle ID as “debug” without explicit ok (can mess TCC).
 
 ## Critical Thinking
 - Fix root cause (not band-aid).
@@ -121,22 +119,6 @@ Read `~/Projects/agent-scripts/tools.md` for the full tool catalog if it exists.
 ### bin/browser-tools / scripts/browser-tools.ts
 - Chrome DevTools helper. Cmds: `start`, `nav`, `eval`, `screenshot`, `pick`, `cookies`, `inspect`, `kill`.
 - Rebuild: `bun build scripts/browser-tools.ts --compile --target bun --outfile bin/browser-tools`.
-
-### xcp
-- Xcode project/workspace helper for managing targets, groups, files, build settings, and assets; run `xcp --help`.
-
-### xcodegen
-- Generates Xcode projects from YAML specs; run `xcodegen --help`.
-
-### lldb
-- Use `lldb` inside tmux to debug native apps; attach to the running app to inspect state.
-
-### axe
-- Simulator automation CLI for describing UI (`axe describe-ui --udid …`), tapping (`axe tap --udid … -x … -y …`), typing, and hardware buttons. Use `axe list-simulators` to enumerate devices.
-
-### oracle
-- Bundle prompt+files for 2nd model. Use when stuck/buggy/review.
-- Run `npx -y @steipete/oracle --help` once/session (before first use).
 
 ### mcporter / iterm / firecrawl / XcodeBuildMCP
 - MCP launcher: `npx mcporter <server>` (see `npx mcporter --help`). Common: `iterm`, `firecrawl`, `XcodeBuildMCP`.
